@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Peponi</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+$('.menu a, #landing a').click(function(e) {
+  $('.tab').slideUp();
+  var active=$(this).attr('rel');
+ 
+   $($(active)).slideDown();
+  
+   $('.menu').slideUp();
+ }); 
+$('.menuIcon').click(function(){
+	 $('.menu').slideToggle();
+});
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="container">
+<header>
+<img class="logo" src="images/logo.png" />
+</header>
+<div class="menucont">
+<div class="menuIcon">
+<i></i>
+<i></i>
+<i></i>
+</div><!-- /.menuIcon-->
+<ul class="menu">
+<li><a rel="#landing" class="homeLink">Home</a></li>
+<li><a rel="#news" class="newsLink">Latest News</a></li>
+<li><a rel="#events" class="eventsLink">Calendar Events</a></li>
+</ul>
+</div>
+
+
+<div id="landing" class="tab">
+<ul>
+<li><a rel="#news" class="newsLink"><img src="images/news.png" /></a></li>
+<li><a rel="#events"  class="eventsLink"><img src="images/calendar.png" /></a></li>
+   
+</ul>
+</div><!-- /landing -->
+
+
+<div id="news" class="tab">
+<img src="images/news-inner.png" />
+</div><!-- /news -->
+
+
+
+
+
+<div id="events" class="tab">
+<img src="images/calendar-inner.png" />
+<ul>
+<li>
+<h2>1 March 2014</h2>
+<a href="#">SWIMMING: IAPS Trophy Gala - Kenton</a>
+<a href="#">SWIMMING: National Age Groups Open and Relays</a>
+</li>
+<h2>2 March 2014</h2>
+<a href="#">SWIMMING: National Age Groups Open and Relays</a>
+<a href="#">BOYS SQUASH: IAPS Tournament at Braeburn</a>
+<a href="#">GIRLS SQUASH: IAPS: Tournament at The Banda</a>
+</ul>
+</div><!-- /events -->
+</div>
+</div>
+</body>
+</html>
