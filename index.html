@@ -9,7 +9,7 @@
 <script src="phonegap.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(e) {
-$('.menu a, #landing a').click(function(e) {
+$('.menu a, #landing a,.logo').click(function(e) {
   $('.tab').slideUp();
   var active=$(this).attr('rel');
  
@@ -28,7 +28,7 @@ $('.menuIcon').click(function(){
 <div id="wrapper">
 <div id="container">
 <header>
-<img class="logo" src="images/logo.png" />
+<img class="logo" class="logo" rel="#landing" src="images/logo.png" />
 </header>
 <div class="menucont">
 <div class="menuIcon">
@@ -46,15 +46,18 @@ $('.menuIcon').click(function(){
 
 <div id="landing" class="tab">
 <ul>
-<li><a rel="#news" class="newsLink"><img src="images/news.png" /></a></li>
-<li><a rel="#events"  class="eventsLink"><img src="images/calendar.png" /></a></li>
+<li><a rel="#news" class="newsLink"><img src="images/news.png" /><span>LATEST NEWS</span></a></li>
+<li><a rel="#events"  class="eventsLink"><img src="images/calendar.png" /><span>EVENTS CALENDAR</span></a></li>
    
 </ul>
 </div><!-- /landing -->
 
 
 <div id="news" class="tab">
+<div class="title">
 <img src="images/news-inner.png" />
+</div>
+
 </div><!-- /news -->
 
 
@@ -62,7 +65,9 @@ $('.menuIcon').click(function(){
 
 
 <div id="events" class="tab">
+<div class="title">
 <img src="images/calendar-inner.png" />
+</div>
 <ul>
 <li>
 <h2>1 March 2014</h2>

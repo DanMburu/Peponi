@@ -8,11 +8,12 @@ h2{color:#fff;}
 
 #wrapper{
  /*width:100%;*/
- width: 320px;
+ width: 100%;
+ max-width:480px;
  float:left;
 }
 #container{
-width:320px;
+width:100%;
 margin:auto;
 overflow:hidden;
 position:relative;	
@@ -26,22 +27,34 @@ transition: all 1s linear;
 }
 .logo{
 	float:left;
-	margin:10px 5px;
+	margin:10px 5px 30px;
 }
 #landing,#events,#news {
   clear: left;
   float: left;
+  width: 100%;
 }
 #landing ul{
 	padding:0;
 	margin:0;
 }
-#landing ul li{
-	float:left;
-	margin-bottom:20px;
+#landing ul li {
+  background: none repeat scroll 0 0 #597BD7;
+  float: left;
+  height: 68px;
+  margin-bottom: 50px;
+  overflow: visible;
+  width: 100%;
 }
 #events,#news{
 	display:none;
+	
+}
+#landing img {
+  margin-top: -5px;
+}
+#landing .eventsLink > img {
+  margin-top: -20px;
 }
 .menuIcon i{
 	float:left;
@@ -65,8 +78,9 @@ transition: all 1s linear;
 }
 .menucont {
   float: right;
+  margin-top: 5px;
   position: absolute;
-  right: 0;
+  right: 7px;
 }
 .menu {
   background: none repeat scroll 0 0 #597BD7;
@@ -94,4 +108,30 @@ transition: all 1s linear;
 }
 .menu li:last-child {
   border-bottom: medium none;
+}
+#landing span {
+  bottom: 21px;
+  font-weight: bold;
+  left: 139px;
+  position: absolute;
+  width: 60px;
+}
+#landing .eventsLink span {
+  bottom: 40px;
+}
+#landing a{
+	float:left;
+	width:100%;
+	position:relative;
+}
+.title {
+  background: none repeat scroll 0 0 #597BD7;
+  float: left;
+  margin-bottom: 22px;
+  width: 100%;
+}
+.title > img {
+  float: left;
+  margin-bottom: -10px;
+  margin-top: -12px;
 }
