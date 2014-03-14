@@ -17,7 +17,13 @@ $(document).ready(function(e) {
   
    $('.menu').slideUp();
  }); ;*/
- $('#landing ul li').slideDown();
+$('#landing').animate({
+	opacity: 1,
+	marginLeft: "0",
+	//height: "toggle"
+	}, 1000, function() {
+	// Animation complete.
+});
 $('.menuIcon').click(function(){
 	 $('.menu').slideToggle();
 })
