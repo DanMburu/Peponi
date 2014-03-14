@@ -16,6 +16,9 @@
     <access origin="http://cedgeweb.com/daawat" />
 	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="Notification">
+      <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -25,7 +28,8 @@
     <icon src="res/icon/android/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/android/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/icon/android/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
-	<plugin name="StatusBarNotification" value="com.phonegap.plugins.statusBarNotification.StatusBarNotification"/>
+	<uses-permission android:name="android.permission.VIBRATE" />
+
     
 
     <!--
