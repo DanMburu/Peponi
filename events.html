@@ -17,6 +17,12 @@ $(document).ready(function(e) {
   
    $('.menu').slideUp();
  }); ;*/
+ $('#events').animate({
+	opacity: 1,
+	marginLeft: "0",
+	}, 1000, function() {
+	// Animation complete.
+});
 $('.menuIcon').click(function(){
 	 $('.menu').slideToggle();
 })
