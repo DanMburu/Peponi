@@ -25,7 +25,7 @@
     <icon src="res/icon/android/icon-48.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icon/android/icon-72.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="res/icon/android/icon-96.png"  gap:platform="android"    gap:density="xhdpi" />
-	
+	<plugin name="StatusBarNotification" value="com.phonegap.plugins.statusBarNotification.StatusBarNotification"/>
     
 
     <!--
