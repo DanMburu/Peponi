@@ -59,20 +59,14 @@ transition: all 1s linear;
 #landing .eventsLink > img {
   margin-top: -20px;
 }
-.menuIcon i{
-	float:left;
-	clear:left;
-	background:#666;
-	height:5px;
-	width:50px;
-}
+
 .menuIcon {
   cursor: pointer;
   float: right;
   margin-bottom: 10px;
 }
 .menuIcon i {
-  background: none repeat scroll 0 0 #FFFFFF;
+  background: none repeat scroll 0 0 #E7E7E7;
   clear: left;
   float: left;
   height: 6px;
@@ -86,7 +80,7 @@ transition: all 1s linear;
   right: 7px;
 }
 .menu {
-  background: none repeat scroll 0 0 #597BD7;
+  background: none repeat scroll 0 0 #E7E7E7;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   clear: right;
@@ -95,13 +89,16 @@ transition: all 1s linear;
   margin: 0;
   padding: 10px 2px 0;
   position: relative;
-  top: -13px;
+  top: -11px;
   width: 200px;
+  z-index:10;
 }
+
 .menu a {
   float: left;
   padding: 10px 8px;
   width: 100%;
+   color: #666666;
 }
 .menu li {
   border-bottom: 1px solid #FFFFFF;
