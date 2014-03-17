@@ -113,7 +113,7 @@
 		 function addEvent(){ 
 		 alert('adding');
 					 // prep some variables
-			  var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
+			/*  var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
 			  var endDate = new Date(2014,3,13,19,30,0,0,0);
 			  var title = "My nice event";
 			  var location = "Home";
@@ -122,7 +122,15 @@
 			  var error = function(message) { alert("Error: " + message); };
 			
 			  // create a calendar (iOS only for now)
-			  window.plugins.calendar.createCalendar(calendarName,success,error);
+			  window.plugins.calendar.createCalendar(calendarName,success,error);*/
+			  var title = "title";
+				var location = "location";
+				var notes = "notes";
+				var startDate = new Date(2104,3,5,10,30);
+				var endDate = new Date(2104,3,5,20,30);
+				window.Calendar.createEvent(title, location, notes, startDate, endDate, 
+				function() {alert('done');console.log('success');}, 
+				function() {console.log('fail');});
 			  alert('done');
 		  }
          
