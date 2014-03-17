@@ -77,7 +77,8 @@
       </script>
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
       <!-- below <script src="phonegap.js"></script> -->
-      <script src="js/Calendar.js"></script>
+      <script src="js/plugins/Calendar.js"></script>
+      <script src="Calendar.js"></script>
       <script type="text/javascript" charset="utf-8">
          // Wait for device API libraries to load
          //
@@ -118,7 +119,8 @@
 				function() {console.log('fail');});
 			  alert('done');
 		  }
-          function nl(){ 
+          function addEvent(){ 
+		   alert('calling addEvent');
 		    var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
 			  var endDate = new Date(2014,3,13,19,30,0,0,0);
 			  var title = "My nice event";
@@ -128,7 +130,9 @@
 			  var error = function(message) { alert("Error: " + message); };
 			
 			  // create a calendar (iOS only for now)
-			  window.plugins.calendar.createCalendar(calendarName,success,error);
+			 // window.plugins.calendar.createCalendar(calendarName,success,error);
+			    // create (the only function also supported on Android for now)
+                   window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
 			   alert('done');
 		  }
 		 
@@ -161,7 +165,7 @@
                     <a href="#">SWIMMING: IAPS Trophy Gala - Kenton</a>
                     <a href="#">SWIMMING: National Age Groups Open and Relays</a>
                     <a onClick="badrit()"  class="cal">badrit</a>
-                     <a onClick="nl()"  class="cal">nl.x-services</a>
+                     <a onClick="addEvent()"  class="cal">nl.x-services</a>
                     
                    
                     </li>
