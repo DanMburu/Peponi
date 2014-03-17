@@ -14,15 +14,8 @@
          *  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
          input, textarea  { -webkit-user-select:text; }
       </style>
-      <script src="intelxdk.js"></script>
-      <script type="text/javascript">
-         /* This code is used to run as soon as Intel activates */
-         var onDeviceReady=function(){
-         //hide splash screen
-         intel.xdk.device.hideSplashScreen();
-         };
-         document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
-      </script>
+      
+      
       <script type="application/javascript" src="js/jquery.min.js"></script>
       <script type="application/javascript" src="jqm/jquery.mobile-min-.js" data-ver="0"></script>
       <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
@@ -83,6 +76,8 @@
          });
       </script>
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+      <!-- below <script src="phonegap.js"></script> -->
+      <script src="js/Calendar.js"></script>
       <script type="text/javascript" charset="utf-8">
          // Wait for device API libraries to load
          //
@@ -110,20 +105,10 @@
          function test(){
          window.plugin.notification.local.add({ message: 'Great school app!' });
          }
-		 function addEvent(){ 
+		 function badrit(){ 
 		 alert('adding');
 					 // prep some variables
-			/*  var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
-			  var endDate = new Date(2014,3,13,19,30,0,0,0);
-			  var title = "My nice event";
-			  var location = "Home";
-			  var notes = "Some notes about this event.";
-			  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
-			  var error = function(message) { alert("Error: " + message); };
-			
-			  // create a calendar (iOS only for now)
-			  window.plugins.calendar.createCalendar(calendarName,success,error);*/
-			  var title = "title";
+			   var title = "title";
 				var location = "location";
 				var notes = "notes";
 				var startDate = new Date(2104,3,5,10,30);
@@ -133,7 +118,20 @@
 				function() {console.log('fail');});
 			  alert('done');
 		  }
-         
+          function nl(){ 
+		    var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
+			  var endDate = new Date(2014,3,13,19,30,0,0,0);
+			  var title = "My nice event";
+			  var location = "Home";
+			  var notes = "Some notes about this event.";
+			  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+			  var error = function(message) { alert("Error: " + message); };
+			
+			  // create a calendar (iOS only for now)
+			  window.plugins.calendar.createCalendar(calendarName,success,error);
+			   alert('done');
+		  }
+		 
       </script>
    </head>
    <body>
@@ -162,7 +160,10 @@
                     <h2>1 March 2014</h2>
                     <a href="#">SWIMMING: IAPS Trophy Gala - Kenton</a>
                     <a href="#">SWIMMING: National Age Groups Open and Relays</a>
-                    <a onClick="addEvent()"  class="cal">Add to Calendar</a>
+                    <a onClick="badrit()"  class="cal">badrit</a>
+                     <a onClick="nl()"  class="cal">nl.x-services</a>
+                    
+                   
                     </li>
                     <h2>2 March 2014</h2>
                     <a href="#">SWIMMING: National Age Groups Open and Relays</a>

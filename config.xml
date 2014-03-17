@@ -12,9 +12,12 @@
     <author href="http://creative.co.ke" email="d.mburu@creative.co.ke">
         Peponi Preparatory
     </author>
-    <access /> 
+   
+	
+	
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 	<gap:plugin name="nl.x-services.plugins.calendar" />
+	
 	<gap:plugin name="com.badrit.calendar" />
 	
 	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
