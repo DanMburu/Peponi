@@ -14,6 +14,7 @@
     </author>
     <access /> 
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
+	<gap:plugin name="nl.x-services.plugins.calendar" />
 	<plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 	<feature name="http://api.phonegap.com/1.0/network"/>
     <preference name="orientation"      value="default" />
