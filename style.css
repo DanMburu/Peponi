@@ -141,3 +141,10 @@ transition: all 1s linear;
   margin-top: -12px;
 }
 #mainsub{margin-right:-200px;}
+#leftSlider a{
+background: none repeat scroll 0 0 #F6F6F6;
+border-color: #DDDDDD;
+color: #333333;
+text-shadow: 0 1px 0 #F3F3F3;
+}
+#leftSlider ul{margin-top:-10px;}
