@@ -78,7 +78,7 @@
       <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
       <!-- below <script src="phonegap.js"></script> -->
       <script src="js/plugins/Calendar.js"></script>
-      <script src="Calendar.js"></script>
+     
       <script type="text/javascript" charset="utf-8">
          // Wait for device API libraries to load
          //
@@ -121,12 +121,12 @@
 		  }
           function addEvent(){ 
 		   alert('calling addEvent');
-		    var startDate = new Date(2014,3,13,18,30,0,0,0); // beware: month 0 = january, 11 = december
-			  var endDate = new Date(2014,3,13,19,30,0,0,0);
+		    var startDate = new Date(2014,3,22,18,30,0,0,0); // beware: month 0 = january, 11 = december
+			  var endDate = new Date(2014,3,24,19,30,0,0,0);
 			  var title = "My nice event";
 			  var location = "Home";
 			  var notes = "Some notes about this event.";
-			  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+			  var success = function(message) { alert("Success: Event added to your phone calandar" + JSON.stringify(message)); };
 			  var error = function(message) { alert("Error: " + message); };
 			
 			  // create a calendar (iOS only for now)
