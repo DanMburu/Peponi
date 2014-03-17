@@ -8,7 +8,7 @@ a {text-decoration:none;color:#fff !important;cursor:pointer }
   font-size:13px;
 }
 ul, ol {list-style:none;}
-body {padding:0;margin:0;background:#4161b6;font-size:100%; line-height:110%;color: #454545; font-family:'pt_sansregular',"Trebuchet MS", Helvetica, sans-serif;  }
+body {padding:0;margin:0;background:#4161b6;font-size:100%; line-height:110%;color: #454545; font-family:Arial, Helvetica, sans-serif}
 h2{color:#fff;}
 
 #wrapper{
@@ -148,3 +148,16 @@ color: #333333;
 text-shadow: 0 1px 0 #F3F3F3;
 }
 #leftSlider ul{margin-top:-10px;}
+#events .cal {
+  clear: left;
+  float: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+#events h2{float:left;clear:left;}
+#events a {
+  clear: left;
+  float: left;
+  font-size: 14px;
+}
