@@ -1,7 +1,12 @@
 /** RESET **/
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary,main {display: block;}
 img {border:0; display:block; outline:0;max-width:100%;}
-a {text-decoration:none;color:#fff;cursor:pointer }
+a {text-decoration:none;color:#fff !important;cursor:pointer }
+#leftSlider a {
+  color: #454545 !important;
+  font-weight: normal;
+  font-size:13px;
+}
 ul, ol {list-style:none;}
 body {padding:0;margin:0;background:#4161b6;font-size:100%; line-height:110%;color: #454545; font-family:'pt_sansregular',"Trebuchet MS", Helvetica, sans-serif;  }
 h2{color:#fff;}
@@ -27,7 +32,7 @@ transition: all 1s linear;
 }
 .logo{
 	float:left;
-	margin:10px 5px 30px;
+	margin:10px 5px 30px 50px;
 }
 #landing,#events,#news {
   clear: left;
@@ -66,7 +71,7 @@ transition: all 1s linear;
   margin-bottom: 10px;
 }
 .menuIcon i {
-  background: none repeat scroll 0 0 #E7E7E7;
+  background: none repeat scroll 0 0 #A5A5A5;
   clear: left;
   float: left;
   height: 6px;
@@ -74,10 +79,10 @@ transition: all 1s linear;
   width: 50px;
 }
 .menucont {
-  float: right;
+  left: 7px;
   margin-top: 5px;
   position: absolute;
-  right: 7px;
+  z-index: 10;
 }
 .menu {
   background: none repeat scroll 0 0 #E7E7E7;
@@ -135,3 +140,4 @@ transition: all 1s linear;
   margin-bottom: -10px;
   margin-top: -12px;
 }
+#mainsub{margin-right:-200px;}

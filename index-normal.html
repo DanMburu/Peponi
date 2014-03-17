@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Peponi</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+/*$('.menu a, #landing a,.logo').click(function(e) {
+  $('.tab').slideUp();
+  var active=$(this).attr('rel');
+ 
+   $($(active)).slideDown();
+  
+   $('.menu').slideUp();
+ }); ;*/
+$('#landing').animate({
+	opacity: 1,
+	marginLeft: "0",
+	//height: "toggle"
+	}, 1000, function() {
+	// Animation complete.
+});
+$('.menuIcon').click(function(){
+	 $('.menu').slideToggle();
+})
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+		
+		var now = new Date().getTime(),
+    _60_seconds_from_now = new Date(now + 10*1000);
+
+		window.plugin.notification.local.add({
+			id:      1, // is converted to a string
+			title:   'Reminder',
+			message: 'Thank you for installing Peponi Schools App. You will be able to receive all important updates.',
+			repeat:  'weekly',
+			date:    _60_seconds_from_now
+		});
+    }
+window.plugin.notification.local.add({ message: 'Great school app!' });
+    // Show a custom alert
+    //
+	function test(){
+		window.plugin.notification.local.add({ message: 'Great school app!' });
+	}
+    
+
+    </script>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="container">
+<header>
+<a href="index.html"><img class="logo" class="logo" src="images/logo.png" /></a>
+</header>
+<div class="menucont">
+<div class="menuIcon">
+<i></i>
+<i></i>
+<i></i>
+</div><!-- /.menuIcon-->
+<ul class="menu">
+<li><a href="index.html" class="homeLink">Home</a></li>
+<li><a href="news.html" class="newsLink">Latest News</a></li>
+<li><a href="events.html" class="eventsLink">Calendar Events</a></li>
+<li><a href="#" onclick="test()" class="eventsLink">Test Notifications</a></li>
+
+</ul>
+</div>
+
+
+<div id="landing" class="tab">
+<ul>
+<li><a href="news.html" class="newsLink"><img src="images/news.png" /><span>LATEST NEWS</span></a></li>
+<li><a href="events.html"  class="eventsLink"><img src="images/calendar.png" /><span>EVENTS CALENDAR</span></a></li>
+   
+</ul>
+</div><!-- /landing -->
+
+</div>
+</div>
+</body>
+</html>

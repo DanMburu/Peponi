@@ -1,65 +1,173 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Peponi</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-<script src="phonegap.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function(e) {
-/*$('.menu a, #landing a,.logo').click(function(e) {
-  $('.tab').slideUp();
-  var active=$(this).attr('rel');
- 
-   $($(active)).slideDown();
-  
-   $('.menu').slideUp();
- }); ;*/
-
-$('#news').animate({
-	opacity: 1,
-	marginLeft: "0",
-	//height: "toggle"
-	}, 1000, function() {
-	// Animation complete.
-});
-$('.menuIcon').click(function(){
-	 $('.menu').slideToggle();
-})
-});
-</script>
-</head>
-
-<body>
-<div id="wrapper">
-<div id="container">
-<header>
-<a href="index.html"><img class="logo" class="logo" src="images/logo.png" /></a>
-</header>
-<div class="menucont">
-<div class="menuIcon">
-<i></i>
-<i></i>
-<i></i>
-</div><!-- /.menuIcon-->
-<ul class="menu">
-<li><a href="index.html" class="homeLink">Home</a></li>
-<li><a href="news.html" class="newsLink">Latest News</a></li>
-<li><a href="events.html" class="eventsLink">Calendar Events</a></li>
-</ul>
-</div>
-
-
-<div id="news" class="tab">
-<div class="title">
-<img src="images/news-inner.png" />
-</div>
-
-</div><!-- /news -->
-
-</div>
-</div>
-</body>
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <title>Your New Application</title>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+      <style type="text/css">
+         /* Prevent copy paste for all elements except text fields */
+         *  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+         input, textarea  { -webkit-user-select:text; }
+      </style>
+      <script src="intelxdk.js"></script>
+      <script type="text/javascript">
+         /* This code is used to run as soon as Intel activates */
+         var onDeviceReady=function(){
+         //hide splash screen
+         intel.xdk.device.hideSplashScreen();
+         };
+         document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+      </script>
+      <script type="application/javascript" src="js/jquery.min.js"></script>
+      <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+      <script type="application/javascript" src="sidebar/js/jquery.event.move.js"></script>
+      <script type="application/javascript" src="sidebar/js/jquery.event.swipe.js"></script>
+      <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+      <script type="application/javascript" src="sidebar/js/swipe.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(e) {
+         /*$('.menu a, #landing a,.logo').click(function(e) {
+           $('.tab').slideUp();
+           var active=$(this).attr('rel');
+          
+            $($(active)).slideDown();
+           
+            $('.menu').slideUp();
+          }); ;*/
+          var open=true;
+          $('.menucont').click(function(){
+         	 if(parseInt($('#mainsub').css('margin-left'))>20){
+         		 open=false;
+         	 }else{
+         		 open=true;
+         	 }
+         	 if(open){
+         		$('#leftSlider').animate({left: "0px"}, 400);
+         		$('#mainsub').animate({marginLeft: "200px"}, 400);
+         		open=false;
+         	 }else{
+         		$('#leftSlider').animate({left: "-200px"}, 400);
+         		$('#mainsub').animate({marginLeft: "0px"}, 400);
+         		open=true;
+         	 }
+          })
+          
+         $('#landing').animate({
+         	opacity: 1,
+         	marginLeft: "0",
+         	//height: "toggle"
+         	}, 1000, function() {
+         	// Animation complete.
+         });
+         $('#news').animate({
+         	opacity: 1,
+         	marginLeft: "0",
+         	//height: "toggle"
+         	}, 1000, function() {
+         	// Animation complete.
+         });
+          $('#events').animate({
+         	opacity: 1,
+         	marginLeft: "0",
+         	}, 1000, function() {
+         	// Animation complete.
+         });
+         $('.menuIcon').click(function(){
+         	 $('.menu').slideToggle();
+         })
+         });
+      </script>
+      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+      <script type="text/javascript" charset="utf-8">
+         // Wait for device API libraries to load
+         //
+         document.addEventListener("deviceready", onDeviceReady, false);
+         
+         // device APIs are available
+         //
+         function onDeviceReady() {
+             // Empty
+         
+         var now = new Date().getTime(),
+         _60_seconds_from_now = new Date(now + 10*1000);
+         
+         window.plugin.notification.local.add({
+         id:      1, // is converted to a string
+         title:   'Reminder',
+         message: 'Thank you for installing Peponi Schools App. You will be able to receive all important updates.',
+         repeat:  'weekly',
+         date:    _60_seconds_from_now
+         });
+         }
+         window.plugin.notification.local.add({ message: 'Great school app!' });
+         // Show a custom alert
+         //
+         function test(){
+         window.plugin.notification.local.add({ message: 'Great school app!' });
+         }
+         
+         
+      </script>
+   </head>
+   <body>
+      <!-- content goes here-->
+      <div class="uwrap">
+         <div class="upage" id="mainpage" data-role="page">
+            <div class="upage-outer">
+               <div class="menucont">
+                  <div class="menuIcon">
+                     <i></i>
+                     <i></i>
+                     <i></i>
+                  </div>
+                  <!-- /.menuIcon-->
+               </div>
+               <div class="upage-content" id="mainsub">
+                  <header>
+                     <a href="index.html"><img class="logo" class="logo" src="images/logo.png" /></a>
+                  </header>
+                 <div id="news" class="tab">
+                    <div class="title">
+                    <img src="images/news-inner.png" />
+                    </div>
+                    
+                    </div><!-- /news -->
+               </div>
+               <!-- /upage-content -->
+               <div class="inner-element uib_w_2 uib_sidebar leftbar bar-bg bar-gutter thumb-bg swipe" data-uib="layout/left_sidebar" data-ver="0" data-anim="{'style':'squeeze', 'v':200, 'side':'left'}" id="leftSlider">
+                  <div class="sidebar-content">
+                     <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                           <div class="widget-container content-area vertical-col">
+                              <div class="widget uib_w_3 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                                 <ul data-role="listview">
+                                    <li class="widget uib_w_4" data-uib="jquery_mobile/listitem" data-ver="0"><a href="index.html" class="homeLink">Home</a>
+                                    </li>
+                                    <li class="widget uib_w_5" data-uib="jquery_mobile/listitem" data-ver="0"><a href="news.html" class="newsLink">Latest News</a>
+                                    </li>
+                                    <li class="widget uib_w_6" data-uib="jquery_mobile/listitem" data-ver="0"><a href="events.html" class="eventsLink">Calendar Events</a>
+                                    </li>
+                                    <li class="widget uib_w_6" data-uib="jquery_mobile/listitem" data-ver="0"><a href="#" onclick="test()" class="eventsLink">Test Notifications</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <span class="uib_shim"></span>
+                           </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /upage-outer -->
+         </div>
+         <!-- /upage -->
+      </div>
+      <!-- /uwrap -->
+   </body>
 </html>
